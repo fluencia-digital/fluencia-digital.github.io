@@ -223,5 +223,16 @@ function closeInfo(){$('modal').classList.add('hidden')}
 window.addEventListener('keydown',e=>{if($('gameScreen').classList.contains('hidden'))return;let k=e.key.toUpperCase();if(k==='BACKSPACE')handleKey('BACKSPACE');else if(k==='ENTER')handleKey('ENTER');else if(/^[A-Z]$/.test(k))handleKey(k)});
 showScreen('homeScreen');
 </script>
+<!-- voltar-hub:inicio -->
+<style>
+#voltar-hub{all:initial;position:fixed;z-index:2147483647;left:max(12px,env(safe-area-inset-left));bottom:max(12px,env(safe-area-inset-bottom));display:inline-flex;align-items:center;gap:6px;box-sizing:border-box;padding:8px 15px 8px 12px;border-radius:999px;background:#1b0057;color:#fffdf5;border:2px solid #fffdf5;box-shadow:0 4px 14px rgba(27,0,87,.35);font:700 13px/1.1 'Poppins',Arial,sans-serif;letter-spacing:.01em;text-decoration:none;cursor:pointer;opacity:.9;transition:background .15s,opacity .15s,transform .15s;-webkit-tap-highlight-color:transparent}
+#voltar-hub[data-pos="topo"]{bottom:auto;top:max(12px,env(safe-area-inset-top))}
+#voltar-hub:hover,#voltar-hub:focus-visible{opacity:1;background:#c80053;transform:translateY(-1px)}
+#voltar-hub:focus-visible{outline:3px solid #ffdc74;outline-offset:2px}
+@media print{#voltar-hub{display:none}}
+@media (prefers-reduced-motion:reduce){#voltar-hub{transition:none}#voltar-hub:hover{transform:none}}
+</style>
+<a id="voltar-hub" href="../" title="Voltar para a lista de jogos" aria-label="Voltar para a lista de jogos">&larr; Todos os jogos</a>
+<!-- voltar-hub:fim -->
 </body>
 </html>
